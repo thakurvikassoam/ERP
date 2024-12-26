@@ -15,7 +15,7 @@ WORKDIR /src
 COPY ["ERP.csproj", "ERP/"]
 RUN dotnet restore "ERP/ERP.csproj"
 COPY . .
-WORKDIR "/src/ERP"
+WORKDIR "/src"
 RUN dotnet build "ERP.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
