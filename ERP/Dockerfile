@@ -13,7 +13,7 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["ERP.csproj", "ERP/"]
-RUN dotnet restore "ERP.csproj"
+RUN dotnet restore "ERP/ERP.csproj"
 COPY . .
 WORKDIR "/src/ERP"
 RUN dotnet build "./ERP.csproj" -c $BUILD_CONFIGURATION -o /app/build
