@@ -12,7 +12,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["ERP/ERP.csproj", "ERP/"]
+COPY ["ERP.csproj", "ERP/"]
 RUN dotnet restore "./ERP/ERP.csproj"
 COPY . .
 WORKDIR "/src/ERP"
