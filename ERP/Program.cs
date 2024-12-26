@@ -17,7 +17,7 @@ public class Program
 
         var app = builder.Build();
 
-        app.MapDefaultEndpoints();
+       // app.MapDefaultEndpoints();
 
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
